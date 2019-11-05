@@ -74,14 +74,11 @@
                                 <h3>Комментарии</h3>
                             </div>
                             <div class="card-body">
-                                <?php if (issetMessage()) { ?>
-
-                                    <div class="alert alert-success" role="alert">
-                                        <?php issetMessage(); ?>
-
-                                    <?php } ?>
+                                    <div class="alert alert-success <?php if (empty(issetMessage())) echo 'd-none';?>" role="alert">
+                                        <?php textMessage(); ?>
                                     </div>
                                     <?php
+
                                     // вывод комментов:
                                     $comments = getComments();
                                     foreach ($comments as $user) {

@@ -75,11 +75,10 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <?php if ( issetMessage()) { ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?php   issetMessage(); ?>
-                                        </div>
-                                    <?php } ?>
+
+                                    <div class="alert alert-success <?php if (empty(issetMessage())) echo 'd-none';?>" role="alert">
+                                        <?php textMessage(); ?>
+                                    </div>
 
                                     <form action="profile_handling_name.php" method="post" enctype="multipart/form-data">
                                         <div class="row">
@@ -122,11 +121,6 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <?php if ( issetMessage()) { ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?php issetMessage(); ?>
-                                        </div>
-                                    <?php } ?>
                                     <form action="profile_handling_password.php" method="post">
                                         <div class="row">
                                             <div class="col-md-8">

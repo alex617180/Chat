@@ -1,6 +1,5 @@
 <?php require_once 'db.php';
-echo $_SESSION['new_user'];
-unset($_SESSION['new_user']); ?>
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +18,10 @@ unset($_SESSION['new_user']); ?>
 </head>
 
 <body>
+    <div class="alert alert-success <?php if (empty($_SESSION['new_user'])) echo 'd-none';?>" role="alert">
+        <?php echo $_SESSION['new_user'];
+                    unset($_SESSION['new_user']); ?>
+    </div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -62,7 +65,7 @@ unset($_SESSION['new_user']); ?>
                                         <div class="col-md-6">
                                             <input id="email" type="email" class="form-control is-invalid " name="email" autocomplete="email" autofocus required>
                                             <span class="invalid-feedback" role="alert">
-                                                <strong><?php issetMessage(); ?></strong>
+                                                <strong><?php textMessage(); ?></strong>
                                             </span>
                                         </div>
                                     </div>

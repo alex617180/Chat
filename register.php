@@ -57,7 +57,7 @@
                                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" autofocus required>
 
                                             <span class="invalid-feedback" role="alert">
-                                                <strong><?php issetMessage(); ?></strong>
+                                                <strong><?php textMessage(); ?></strong>
                                             </span>
                                         </div>
                                     </div>

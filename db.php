@@ -64,64 +64,90 @@ function getNameUser()
 	}
 function issetMessage()
 	{
+		$bool = false;
+		if (isset($_SESSION['result']) || isset($_SESSION['new_name']) || isset($_SESSION['new_email']) || isset($_SESSION['image_err_ext']) || isset($_SESSION['image_err_size']) || isset($_SESSION['image_err_upl']) || isset($_SESSION['image_new']) || isset($_SESSION['email_err']) || isset($_SESSION['password_upd']) || isset($_SESSION['password_err']) || isset($_SESSION['password_err1']) || isset($_SESSION['password_err2']) || isset($_SESSION['login_err']) || isset($_SESSION['login_err1']) || isset($_SESSION['login_pas_err']))
+
+			$bool = true;
+
+		return $bool;
+	}
+	function textMessage()
+	{
+		$bool = false;
 		if (isset($_SESSION['result'])){
 			echo $_SESSION['result'];
 			unset($_SESSION['result']);
+			$bool = true;
 		}
 		if (isset($_SESSION['new_name'])){
 			echo $_SESSION['new_name'] . '  ';
 			unset($_SESSION['new_name']);
+			$bool = true;
 		}
 		if (isset($_SESSION['new_email'])){
 			echo $_SESSION['new_email'] . '  ';
 			unset($_SESSION['new_email']);
+			$bool = true;
 		}
 		if (isset($_SESSION['image_err_ext'])){
 			echo $_SESSION['image_err_ext'] . '  ';
 			unset($_SESSION['image_err_ext']);
+			$bool = true;
 		}
 		if (isset($_SESSION['image_err_size'])){
 			echo $_SESSION['image_err_size'] . '  ';
 			unset($_SESSION['image_err_size']);
+			$bool = true;
 		}
 		if (isset($_SESSION['image_err_upl'])){
 			echo $_SESSION['image_err_upl'] . '  ';
 			unset($_SESSION['image_err_upl']);
+			$bool = true;
 		}
 		if (isset($_SESSION['image_new'])){
 			echo $_SESSION['image_new'] . '  ';
 			unset($_SESSION['image_new']);
+			$bool = true;
 		}
 		if (isset($_SESSION['email_err'])){
 			echo $_SESSION['email_err'] . '  ';
 			unset($_SESSION['email_err']);
+			$bool = true;
 		}
 		if (isset($_SESSION['password_upd'])){
 			echo $_SESSION['password_upd'];
 			unset($_SESSION['password_upd']);
+			$bool = true;
 		}
 		if (isset($_SESSION['password_err'])){
 			echo $_SESSION['password_err'];
 			unset($_SESSION['password_err']);
+			$bool = true;
 		}
 		if (isset($_SESSION['password_err1'])){
 			echo $_SESSION['password_err1'];
 			unset($_SESSION['password_err1']);
+			$bool = true;
 		}
 		if (isset($_SESSION['password_err2'])){
 			echo $_SESSION['password_err2'];
 			unset($_SESSION['password_err2']);
+			$bool = true;
 		}
 		if (isset($_SESSION['login_err1'])){
 			echo $_SESSION['login_err1'];
 			unset($_SESSION['login_err1']);
+			$bool = true;
 		}
 		if (isset($_SESSION['login_err'])){
 			echo $_SESSION['login_err'];
 			unset($_SESSION['login_err']);
+			$bool = true;
 		}
 		if (isset($_SESSION['login_pas_err'])){
 			echo $_SESSION['login_pas_err'];
 			unset($_SESSION['login_pas_err']);
+			$bool = true;
 		}
+		return $bool;
 	}
