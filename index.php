@@ -112,7 +112,7 @@
                                 <div class="card-header">
                                     <h3>Оставить комментарий</h3>
                                 </div>
-                                <?php if (isset($name_aut)) { ?>
+                                <?php if ($name_aut) { ?>
 
                                 <div class="card-body">
                                     <form action="index_handling.php" method="post">

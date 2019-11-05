@@ -64,7 +64,7 @@ if (!empty($email) && ($email != $_SESSION['user_info']->email)) {
         $availableExtension = ['jpg', 'svg', 'png', 'gif'];
 
         // получение расширения загружаемого файла:
-        $extension = mb_substr($image['name'], mb_strripos($image['name'], '.') + 1);
+        $extension = pathinfo($image['name'], PATHINFO_EXTENSION);
 
         // придаём файлу картинки уникальное имя:
         $imageName = uniqid() . '.' . $extension;
