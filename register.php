@@ -54,7 +54,7 @@
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
                                         <div class="col-md-6">
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" autofocus required>
+                                            <input id="name" type="text" class="form-control" name="name" autofocus required>
 
                                             <span class="invalid-feedback" role="alert">
                                                 <strong><?php textMessage(); ?></strong>

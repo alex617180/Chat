@@ -21,7 +21,7 @@ if ($name && ($name != $_SESSION['user_info']->name)) {
 }
 
 //проверка нового email:
-if (!empty($email) && ($email != $_SESSION['user_info']->email)) {
+if ($email && ($email != $_SESSION['user_info']->email)) {
 
     // подготовка и запрос в БД для получения емейл:
     $sql_check = 'SELECT EXISTS( SELECT email FROM users WHERE email = :email )';

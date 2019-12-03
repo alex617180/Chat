@@ -4,7 +4,7 @@
 $name = htmlentities(trim($_POST['name'])); // получаем имя
 $email = htmlentities(trim($_POST['email'])); // получаем емейл
 $password = htmlentities(trim($_POST['password'])); // получаем пароль
-$pas_conf= htmlentities(trim($_POST['pas_conf'])); // //получаем повтор нового пароля
+$pas_conf= htmlentities(trim($_POST['pas_conf'])); // получаем повтор нового пароля
 $image = '';
 
 //хэшируем пароль перед отправкой в БД:
